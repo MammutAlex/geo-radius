@@ -44,12 +44,12 @@ class Radius
 
     private function getMinLng(): float
     {
-        return ($this->lat - $this->radius / abs(cos(deg2rad($this->lat)) * $this->latDegreeInKm));
+        return ($this->lng - $this->radius / abs(cos(deg2rad($this->lat)) * $this->latDegreeInKm));
     }
 
     private function getMaxLng(): float
     {
-        return ($this->lat + $this->radius / abs(cos(deg2rad($this->lat)) * $this->latDegreeInKm));
+        return ($this->lng + $this->radius / abs(cos(deg2rad($this->lat)) * $this->latDegreeInKm));
     }
 
     private function getMinLat():float
